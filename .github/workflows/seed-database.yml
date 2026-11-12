@@ -5,6 +5,9 @@ on: workflow_dispatch
 env:
   pscale_base_directory: .pscale
 
+permissions:
+  contents: read
+
 jobs:
   create-database:
     name: 'Seed database - click here'
@@ -12,7 +15,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2
 
       - name: Seed database - please click on displayed link to authenticate
         timeout-minutes: 3
